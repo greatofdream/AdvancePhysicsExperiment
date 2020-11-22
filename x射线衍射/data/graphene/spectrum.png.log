@@ -1,0 +1,19 @@
+Namespace(element='graphene', opt='../data/graphene/spectrum.png', peak='../data/graphene/spec.pid', spectrum='../data/graphene/spec.txt', stdpeak='../data/graphene/PDF#00-041-1487.txt')
+sin theta ^2
+0    26.379
+1    54.441
+Name: 2theta, dtype: float64
+0    0.052063
+1    0.209230
+Name: 2theta, dtype: float64
+0    0.052070
+1    0.129727
+2    0.142715
+3    0.181645
+4    0.209954
+5    0.247683
+6    0.389609
+7    0.440668
+8    0.472307
+9    0.531369
+Name: 2theta, dtype: float64

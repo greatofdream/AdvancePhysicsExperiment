@@ -1,0 +1,35 @@
+PDF#01-070-3039(RDB):质标=定胞(I);d=计算值;I=计算值
+Copper, syn
+Cu	
+射线=CuKa1	波长=1.5406	滤波法=
+校准=	2θ=43.342-144.904	I/Ic(K值)=8.85
+文献: Suh, I.-K., Ohta, H., Waseda, Y.
+J. Mater. Sci., v23 p757(1988)
+立方晶系-单晶衍射,Fm-3m(225)	Z=4
+晶胞: 3.613x3.613x3.613 <90.0x90.0x90.0>	P.S=cF4.00
+密度(计算)=8.949	密度(测量)=	分子量=63.55	体积=47.16	F(8)=999.9(0.0001,8/0)
+文献: 出处同上
+
+强峰线: 2.09/X 1.81/4 1.28/2 1.09/2 0.83/1 0.81/1
+ANX: N.
+Analysis: Cu1.
+Formula from original source: Cu.
+ICSD Collection Code: 53247.
+Calculated Pattern Original Remarks: Cell at 777 K: 3.644, at 1076 K: 3.667, at 1343 K: 3.692, m.p.
+1356.6 K.
+Cell from 2nd reference: 3.61443 at 296 K, 3.6247 at 449 K, 3.6321 at 550 K, 3.6357 at 607 K, 3.6483 at 779 K.
+Temperature of Data Collection: 293 K.
+Minor Warning: No e.s.d reported/abstracted on the cell dimension.
+No R factors reported/abstracted.
+Wyckoff Sequence: a(FM3-M).
+Unit Cell Data Source: Single Crystal.
+
+    2θ   d(埃)   I(f)  ( h k l)      θ  1/(2d)   2π/d  n^2  
+ 43.342  2.0860  100.0  ( 1 1 1)  21.671  0.2397  3.0121    3
+ 50.479  1.8065   42.7  ( 2 0 0)  25.239  0.2768  3.4781    4
+ 74.173  1.2774   17.1  ( 2 2 0)  37.087  0.3914  4.9188    8
+ 90.000  1.0894   15.7  ( 3 1 1)  45.000  0.4590  5.7678   11
+ 95.216  1.0430    4.2  ( 2 2 2)  47.608  0.4794  6.0243   12
+117.036  0.9033    1.8  ( 4 0 0)  58.518  0.5536  6.9562   16
+136.659  0.8289    5.7  ( 3 3 1)  68.329  0.6032  7.5803   19
+144.904  0.8079    5.4  ( 4 2 0)  72.452  0.6189  7.7773   20

@@ -1,0 +1,26 @@
+Namespace(element='diamond', opt='../data/diamond/spectrum.png', peak='../data/diamond/spec.pid', spectrum='../data/diamond/spec.txt', stdpeak='../data/diamond/PDF.txt')
+sin theta ^2
+0    31.700
+1    43.919
+2    45.473
+3    75.280
+4    91.479
+Name: 2theta, dtype: float64
+0    0.074594
+1    0.139839
+2    0.149377
+3    0.372952
+4    0.512905
+Name: 2theta, dtype: float64
+0    0.139821
+1    0.373146
+2    0.513071
+3    0.746402
+4    0.886328
+Name: 2theta, dtype: float64
+0    100.0
+1     25.0
+2     16.0
+3      8.0
+4     16.0
+Name: heightPercent, dtype: float64

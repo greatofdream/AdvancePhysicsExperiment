@@ -1,0 +1,28 @@
+Namespace(element='hunhewu1', opt='../data/hunhewu1/spectrum.png', peak='../data/hunhewu1/spec.pid', spectrum='../data/hunhewu1/spec.txt', stdpeak=None)
+sin theta ^2
+0     27.499
+1     28.480
+2     31.823
+3     40.659
+4     45.577
+5     50.343
+6     56.657
+7     66.357
+8     66.538
+9     73.822
+10    75.399
+11    84.101
+Name: 2theta, dtype: float64
+0     0.056491
+1     0.060508
+2     0.075159
+3     0.120700
+4     0.150025
+5     0.180905
+6     0.225175
+7     0.299482
+8     0.300930
+9     0.360689
+10    0.373957
+11    0.448612
+Name: 2theta, dtype: float64

@@ -1,0 +1,32 @@
+Namespace(element='Si', opt='../data/Si/spectrum.png', peak='../data/Si/spec.pid', spectrum='../data/Si/spec.txt', stdpeak='../data/Si/PDF#00-027-1402.txt')
+sin theta ^2
+0    28.398
+1    47.239
+2    56.093
+3    69.081
+4    76.319
+5    87.983
+6    94.937
+7    95.223
+Name: 2theta, dtype: float64
+0    0.060167
+1    0.160529
+2    0.221077
+3    0.321476
+4    0.381742
+5    0.482402
+6    0.543030
+7    0.545516
+Name: 2theta, dtype: float64
+0     0.060354
+1     0.160939
+2     0.221287
+3     0.321892
+4     0.382251
+5     0.482794
+6     0.543143
+7     0.643831
+8     0.704094
+9     0.804692
+10    0.865057
+Name: 2theta, dtype: float64

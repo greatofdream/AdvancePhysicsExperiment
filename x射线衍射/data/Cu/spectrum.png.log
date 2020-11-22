@@ -1,0 +1,25 @@
+Namespace(element='Cu', opt='../data/Cu/spectrum.png', peak='../data/Cu/spec.pid', spectrum='../data/Cu/spec.txt', stdpeak='../data/Cu/PDF#01-070-3039.txt')
+sin theta ^2
+0    38.308
+1    43.359
+2    50.498
+3    74.160
+4    89.962
+5    95.257
+Name: 2theta, dtype: float64
+0    0.107655
+1    0.136467
+2    0.181947
+3    0.363524
+4    0.499668
+5    0.545812
+Name: 2theta, dtype: float64
+0    0.136365
+1    0.181820
+2    0.363633
+3    0.500000
+4    0.545455
+5    0.727275
+6    0.863641
+7    0.909095
+Name: 2theta, dtype: float64

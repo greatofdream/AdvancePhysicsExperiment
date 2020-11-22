@@ -1,0 +1,36 @@
+Namespace(element='Mo', opt='../data/Mo/spectrum.png', peak='../data/Mo/spec.pid', spectrum='../data/Mo/spec.txt', stdpeak='../data/Mo/PDF#00-042-1120.txt')
+sin theta ^2
+0     38.326
+1     40.441
+2     58.618
+3     73.640
+4     87.499
+5    101.339
+6    116.016
+7    132.598
+Name: 2theta, dtype: float64
+0    0.107752
+1    0.119463
+2    0.239629
+3    0.359164
+4    0.478182
+5    0.598307
+6    0.719311
+7    0.838425
+Name: 2theta, dtype: float64
+0    0.119888
+1    0.239562
+2    0.359524
+3    0.479036
+4    0.598931
+5    0.718935
+6    0.838727
+Name: 2theta, dtype: float64
+0    100.0
+1     16.0
+2     31.0
+3      9.0
+4     14.0
+5      3.0
+6     24.0
+Name: heightPercent, dtype: float64

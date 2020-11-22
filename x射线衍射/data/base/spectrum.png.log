@@ -1,0 +1,8 @@
+Namespace(element='base', opt='../data/base/spectrum.png', peak='../data/base/spec.pid', spectrum='../data/base/spec.txt', stdpeak=None)
+sin theta ^2
+0    38.322
+1    44.578
+Name: 2theta, dtype: float64
+0    0.107731
+1    0.143852
+Name: 2theta, dtype: float64

@@ -1,0 +1,36 @@
+Namespace(element='NaCl_m', opt='../data/NaCl_m/spectrum.png', peak='../data/NaCl_m/spec.pid', spectrum='../data/NaCl_m/spec.txt', stdpeak='../data/NaCl_m/PDF#00-005-0628.txt')
+sin theta ^2
+0    27.438
+1    31.760
+2    45.520
+3    56.543
+4    66.297
+5    75.359
+6    84.059
+Name: 2theta, dtype: float64
+0    0.056245
+1    0.074870
+2    0.149670
+3    0.224344
+4    0.299002
+5    0.373619
+6    0.448248
+Name: 2theta, dtype: float64
+0     0.055832
+1     0.074562
+2     0.149234
+3     0.205071
+4     0.223871
+5     0.298451
+6     0.354357
+7     0.373146
+8     0.447493
+9     0.503560
+10    0.597049
+11    0.652914
+12    0.671379
+13    0.746235
+14    0.802077
+15    0.820671
+16    0.895281
+Name: 2theta, dtype: float64
