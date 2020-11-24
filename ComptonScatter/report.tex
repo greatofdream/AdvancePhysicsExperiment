@@ -1,0 +1,144 @@
+\documentclass[10pt]{ctexart}
+\usepackage{graphicx, amsmath}
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage[version=4]{mhchem}
+\title{康普顿散射实验}
+\author{张爱强\\指导教师: 张钊}
+\date{}
+% set the section title format
+\ctexset{
+    section/format  += \raggedright
+}
+% The following parameters seem to provide a reasonable page setup.
+\topmargin 0.0cm
+\oddsidemargin 0.2cm
+\textwidth 16cm 
+\textheight 21cm
+\footskip 1.0cm
+% set the abstract format
+\newenvironment{sciabstract}{%
+\begin{quote} \textbf{摘要: }}
+{\end{quote}}
+% set the bibliography format
+\bibliographystyle{elsarticle-num}
+
+
+\begin{document}
+\maketitle
+\begin{sciabstract}
+    本实验使用塑料闪烁体和\ce{NaI}闪烁体符合测量康普顿微分散射截面和散射角的关系。利用\ce{^{57}Co}放射源衰变后准直的$\gamma$入射进入塑料闪烁体，
+    发生康普顿效应，利用\ce{NaI}闪烁体测量散射光子能谱。调整不同的角度，得到散射角和微分散射截面之间的关系。
+    \par\textbf{关键词: } 康普顿散射; 符合方法.
+\end{sciabstract}
+\section{引言}
+康普顿散射验证光的粒子性，该研究在1927年获Nobel Prize。
+
+$\gamma$光子能量比外层电子的结合能大的多，可以把外层电子看作自由电子。利用动量能量守恒可以获得散射$\gamma$光子和散射角的关系。散射$\gamma$光子能量
+\[\]
+用Dirac方程可以得到计算康普顿散射的微分截面的Klein-Nishna公式：
+\[\]
+\section{实验}
+\subsection{实验仪器}
+\begin{description}
+    \item[放射源铅室] 内部有放射源，射线从准直器出射，保证射线方向。后侧有一个旋钮，旋转180\si{degree}控制准直器出口的打开与关闭。 
+    \item[\ce{NaI(Tl)}闪烁体] 测量散射光子的能谱
+    \item[符合器件] 对两路信号进行符合。
+\end{description}
+
+\subsection{实验内容}
+\begin{enumerate}
+    \item 在散射角$\theta=60^\circ$，用\ce{^{137}Cs},\ce{^{60}Co}对探测器\ce{NaI}进行能量刻度。
+    \item 在不同散射角分别用符合法测量\ce{^{137}Cs}的$\gamma$能谱，定出全能峰总计数
+    \item 求不同$\theta$的散射$\gamma$能量以及散射微分截面的相对值。
+\end{enumerate}
+\section{实验结果及讨论}
+\subsection{能量刻度}
+用多道直接测量\ce{NaI(Tl)}闪烁体探测器输出的能谱为图~\ref{fig:EnergyPeakFix}。\ce{^{137}Cs},\ce{^{60}Co}对应于三个特征峰，分别为
+\SI{0.662}{MeV},\SI{1.1732}{MeV},\SI{1.3325}{MeV}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{data/energyPeakFix.png}
+        \caption{寻峰}
+        \label{fig:EnergyPeakFix}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{data/energyFix.png}
+        \caption{能量刻度}
+        \label{fig:EnergyFix}
+    \end{minipage}
+\end{figure}
+图~\ref{fig:EnergyFix}三个特殊的峰的位置对应的道址分别为$18,76，$，利用线性函数进行刻度，拟合得到道址和能量之间的关系。
+\[\]
+\subsection{探测效率和峰总比与能量的关系}
+\begin{figure}[htbp]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{data/epsilon.png}
+        \caption{探测效率和能量}
+        \label{fig:epsilon}
+    \end{minipage}
+    \qquad
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{data/R.png}
+        \caption{峰总比和能量}
+        \label{fig:R}
+    \end{minipage}
+\end{figure}
+图~\ref{fig:epsion}和图~\ref{fig:R}利用线性函数进行刻度，拟合得到探测效率和峰总比与能量之间的关系。
+\[\]
+\[\]
+\subsection{康普顿散射光子能量拟合}
+通过寻峰和能量刻度结果可以获得不同$\theta$下对应的道址和能量如图~\ref{fig:gammaEnergy}和表\ref{tab:gammaEnergy}
+\begin{figure}
+    \centering
+    \includegraphics[width=08\textwidth]{data/gammaEnergy.png}
+    \caption{寻峰结果}
+    \label{fig:gammaEnergy}
+\end{figure}
+因为探测器会有一个能量分辨率，所以全能峰对应于一个高斯分布；另外由于本底的存在，全能峰对应部分有一个本底的叠加。利用高斯和线性本底叠加拟合得到
+拟合结果分别如图~\ref{fig:gammaFit}，对应的全能峰计数标记在表\ref{tab:gammaEnergy}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{data/gammaFit.png}
+    \caption{拟合结果}
+    \label{fig:gammaFit}
+\end{figure}
+\begin{table}
+    \begin{tabular}{|c|c|c|c|}
+        \textbf{$\theta$} & \textbf{道址}& \textbf{$E_{\gamma}$}& \textbf{全能峰计数}\\
+        \hline
+        20  &  0.074594&8&\\
+        40   & 0.139839&15&\\
+        60  &  0.372952&40&\\
+        80  &  0.512905&55&\\
+        100  &  0.372952&40&\\
+        120  &  0.512905&55&\\
+    \end{tabular}
+    \centering
+    \caption{角度与道址，能量，全能峰计数}
+    \label{tab:gammaEnergy}
+\end{table}
+\subsection{散射微分截面}
+如图~\ref{fig:fit}中对散射微分截面进行拟合
+\[t=k*x\]
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{data/normal.png}
+    \caption{时间标定}
+    \label{fig:fit}
+\end{figure}
+本文采用另外一种拟合方法\texttt{likelihood}方法将偶然符合计数和
+衰变寿命同时拟合出来。
+\[\tau=8.229ns\]
+\[n_{rc}=0\]
+\section{结论}
+本实验最终给出原子核衰变寿命为$\tau=8.229ns$。
+\bibliography{report}
+\end{document}
