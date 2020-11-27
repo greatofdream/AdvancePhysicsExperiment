@@ -1,0 +1,11 @@
+96 18463
+169 628
+190 471
+
+Minimizer is Minuit / Migrad
+Chi2                      =  0.0001412840.58
+NDf                       =            1
+Edm                       =  2.11085e-07
+NCalls                    =           92
+p0                        =   0.00697161   +/-   0.000111772     (limited)
+p1                        =  0.000112925   +/-   3072        (limited)
