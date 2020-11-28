@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Bayes Method}{3}{0}{1}
+\beamer@sectionintoc {2}{Feldman Cousin Method}{4}{0}{2}

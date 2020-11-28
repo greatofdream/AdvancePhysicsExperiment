@@ -1,0 +1,121 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.6)  6 NOV 2020 18:16
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**scifile.tex
+(./scifile.tex
+LaTeX2e <2020-10-01> patch level 2
+L3 programming layer <2020-10-27> xparse <2020-03-03>
+(e:/texlive/2020/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(e:/texlive/2020/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count171
+\c@section=\count172
+\c@subsection=\count173
+\c@subsubsection=\count174
+\c@paragraph=\count175
+\c@subparagraph=\count176
+\c@figure=\count177
+\c@table=\count178
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (./scicite.sty
+LaTeX Info: Redefining \cite on input line 160.
+LaTeX Info: Redefining \nocite on input line 227.
+Package: scicite 2003/11/04  v 4.01
+)
+(e:/texlive/2020/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+\c@lastnote=\count179
+LaTeX Font Info:    Trying to load font information for TU+ptm on input line 95
+.
+LaTeX Font Info:    No file TUptm.fd. on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 95.
+
+(e:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2020-09-24 L3 backend support: XeTeX
+\g__graphics_track_int=\count180
+\l__pdf_internal_box=\box47
+\g__pdf_backend_object_int=\count181
+\g__pdf_backend_annotation_int=\count182
+)
+(./scifile.aux)
+\openout1 = `scifile.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 9
+5.
+ (e:/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 103.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 103.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 103.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 103.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 103.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 103.
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 109.
+
+LaTeX Font Info:    Trying to load font information for TU+pcr on input line 11
+2.
+LaTeX Font Info:    No file TUpcr.fd. on input line 112.
+
+LaTeX Font Warning: Font shape `TU/pcr/b/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 112.
+
+
+LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 137.
+
+[1
+
+] [2] [3] [4] [5] (./scifile.bbl [6]) [7] [8
+
+] (./scifile.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 585 strings out of 479341
+ 10456 string characters out of 5878474
+ 285752 words of memory out of 5000000
+ 20042 multiletter control sequences out of 15000+600000
+ 538785 words of font info for 47 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 43i,8n,49p,147b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on scifile.xdv (8 pages, 107628 bytes).
