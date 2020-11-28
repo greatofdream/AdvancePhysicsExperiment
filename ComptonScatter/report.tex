@@ -141,7 +141,7 @@ $\gamma$光子能量比外层电子的结合能大的多，可以把外层电子
 
 \begin{table}
     \begin{tabular}{|c|c|c|c|}
-        \textbf{$\theta$} & \textbf{道址}& \textbf{全能峰计数}& \textbf{$E_{\gamma}$}& \textbf{全能峰计数}\\
+        \textbf{$\theta$} & \textbf{道址}& \textbf{全能峰计数}& \textbf{$E_{\gamma}$}\\
         \hline
                  20   &87.455606 & 6355.6201 &0.610\\
                 40 & 71.267048 & 4483.3065 &0.497\\
@@ -154,8 +154,13 @@ $\gamma$光子能量比外层电子的结合能大的多，可以把外层电子
     \caption{角度与道址，全能峰计数，能量}
     \label{tab:gammaEnergy}
 \end{table}
+理论给出的散射$\gamma$光子能量与散射角的关系为公式~\ref{equ:scatterEnergy}
+\begin{equation}
+    E_{\gamma'}=\frac{E_\gamma}{1+\frac{E_\gamma(1-\cos{\theta})}{m_0c^2}}
+    \label{equ:scatterEnergy}
+\end{equation}
 将对应的能量和角度进行拟合，拟合过程中保留$E_\gamma$为未知量，可以获得如图~\ref{fig:thetaEnergy}中实线的拟合结果，其中$E_\gamma=0.636MeV$，与实际上
-的\SI{0.662}{MeV}有一些差距。图中虚线为理论给出的结果，利用理论上的分布和测量的结果做卡方检验，得到卡方值为$\chi^2=0.00387$，在自由度为4的
+的\SI{0.662}{MeV}有一些差距。图中虚线为理论公式~\ref{equ:scatterEnergy}给出的结果，利用理论上的分布和测量的结果做卡方检验，得到卡方值为$\chi^2=0.00387$，在自由度为4的
 卡方分布下对应的p值为$p=1-1.87E-6$，所以可以认为理论上的分布与实验是吻合的。
 \begin{figure}[htbp]
     \centering
@@ -164,18 +169,36 @@ $\gamma$光子能量比外层电子的结合能大的多，可以把外层电子
     \label{fig:thetaEnergy}
 \end{figure}
 \subsection{散射微分截面}
-选择$60^\circ$作为参考点，画出相对散射微分截面与角度之间的关系，如图~\ref{fig:fit}中对散射微分截面进行拟合
+理论给出的散射微分截面与散射角的关系为公式~\ref{equ:scatterSection}
+\begin{align}
+    \frac{d\sigma(\theta)}{d\Omega}&=\frac{r_0^2}{2}(\frac{E_{\gamma'}}{E_\gamma})^2(\frac{E_{\gamma'}}{E_{\gamma}}+\frac{E_{\gamma}}{E_{\gamma'}}+\sin^2{\theta})\\
+    &=\frac{r_0^2}{2}(\frac{1}{1+\frac{E_\gamma(1-\cos{\theta})}{m_0c^2}})^2(\frac{1}{1+\frac{E_\gamma(1-\cos{\theta})}{m_0c^2}}+1+\frac{E_\gamma(1-\cos{\theta})}{m_0c^2}+\sin^2{\theta})\\
+    \label{equ:scatterSection}
+\end{align}
+考虑到实验测定时探测器对散射样品有一定的立体角，所以接收到的光子数和立体角相关，通过取相对微分散射截面可以消除这个参数影响。
+测定的散射光子的全能峰计数和实际接收到的光子数有探测效率和峰总比的因子，和可以用部分\ref{sec:scaleResult}中的刻度结果进行插值。
+
+那么选择一个参考点后，对应的相对微分散射截面公式为
+\begin{align}
+    \frac{d\sigma(\theta)}{d\Omega}_{relative}=\frac{(\frac{1}{1+\frac{E_\gamma(1-\cos{\theta})}{m_0c^2}})^2(\frac{1}{1+\frac{E_\gamma(1-\cos{\theta})}{m_0c^2}}+1+\frac{E_\gamma(1-\cos{\theta})}{m_0c^2}+\sin^2{\theta})}{(\frac{1}{1+\frac{E_\gamma(1-\cos{\theta_r})}{m_0c^2}})^2(\frac{1}{1+\frac{E_\gamma(1-\cos{\theta_r})}{m_0c^2}}+1+\frac{E_\gamma(1-\cos{\theta_r})}{m_0c^2}+\sin^2{\theta_r})}
+    \label{equ:scatterSectionRelative}
+\end{align}
+而实验的数据处理得到相对微分散射截面公式为
+\begin{align}
+    \frac{d\sigma(\theta)}{d\Omega}_{relative}=\frac{N_p(\theta)R(\theta_r)\epsilon(\theta_r)}{N_p(\theta_0)R(\theta)\epsilon(\theta)}
+    \label{equ:scatterSectionRelativeExp}
+\end{align}
+选择$60^\circ$作为参考点，画出相对散射微分截面与角度之间的关系，如图~\ref{fig:scatterSection}中散点是实验数据给出的结果，虚线是理论给出的结果
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{data/normal.png}
     \caption{时间标定}
-    \label{fig:fit}
+    \label{fig:scatterSection}
 \end{figure}
-本文采用另外一种拟合方法\texttt{likelihood}方法将偶然符合计数和
-衰变寿命同时拟合出来。
-\[\tau=8.229ns\]
-\[n_{rc}=0\]
+利用理论上的分布和测量的结果做卡方检验，得到卡方值为$\chi^2=0.00387$，在自由度为4的
+卡方分布下对应的p值为$p=1-1.87E-6$，所以可以认为理论上的分布与实验是吻合的。
+
 \section{结论}
-本实验最终给出原子核衰变寿命为$\tau=8.229ns$。
+本实验结论是将光子视作粒子得到的能量和微分散射截面随角度的分布与实验结果吻合，卡方检验结果与假设符合。
 \bibliography{report}
 \end{document}
