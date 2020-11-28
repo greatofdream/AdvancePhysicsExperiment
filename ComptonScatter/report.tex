@@ -2,6 +2,7 @@
 \usepackage{graphicx, amsmath}
 \usepackage{siunitx}
 \usepackage{caption}
+\usepackage{url}
 \usepackage[version=4]{mhchem}
 \title{康普顿散射实验}
 \author{张爱强\\指导教师: 张钊}
@@ -35,9 +36,10 @@
 康普顿散射验证光的粒子性，该研究在1927年获Nobel Prize。
 
 $\gamma$光子能量比外层电子的结合能大的多，可以把外层电子看作自由电子。利用动量能量守恒可以获得散射$\gamma$光子和散射角的关系。散射$\gamma$光子能量
-\[\]
+\[E_{\gamma'}=\frac{E_\gamma}{1+\frac{E_\gamma(1-\cos{\theta})}{m_0c^2}}\]
 用Dirac方程可以得到计算康普顿散射的微分截面的Klein-Nishna公式：
-\[\]
+\[\frac{d\sigma(\theta)}{d\Omega}=\frac{r_0^2}{2}(\frac{E_{\gamma'}}{E_\gamma})^2(\frac{E_{\gamma'}}{E_{\gamma}}+\frac{E_{\gamma}}{E_{\gamma'}}+\sin^2{\theta})\]
+
 \section{实验}
 \subsection{实验仪器}
 \begin{description}
@@ -54,6 +56,7 @@ $\gamma$光子能量比外层电子的结合能大的多，可以把外层电子
 \end{enumerate}
 \section{实验结果及讨论}
 \subsection{能量刻度}
+
 用多道直接测量\ce{NaI(Tl)}闪烁体探测器输出的能谱为图~\ref{fig:EnergyPeakFix}。\ce{^{137}Cs},\ce{^{60}Co}对应于三个特征峰，分别为
 \SI{0.662}{MeV},\SI{1.1732}{MeV},\SI{1.3325}{MeV}。从道址90到300之间寻峰，可以排除掉前面的低能本底和后面大部分无用的能量区间，其次
 寻找峰位满足大于左右两侧4个道址，而且距左边10个道址处的幅度要下降为峰值的2/3，筛选出如图~\ref{fig:EnergyPeakFix}中黑色三角形指示的三个位置。
@@ -77,6 +80,7 @@ $\gamma$光子能量比外层电子的结合能大的多，可以把外层电子
 图~\ref{fig:EnergyFix}三个特殊的峰的位置对应的道址分别为$18,76，$，利用线性函数进行刻度，拟合得到道址和能量之间的关系。
 \[E(MeV)=(0.00697\pm 0.00011)x+(0\pm 0.58)\]
 \subsection{探测效率和峰总比与能量的关系}
+\label{sec:scaleResult}
 使用多项式进行插值，为了避免过拟合，设置多项式最大阶数为4，拟合对应的插值函数。
 \begin{figure}[htbp]
     \centering
@@ -136,7 +140,7 @@ $\gamma$光子能量比外层电子的结合能大的多，可以把外层电子
     \caption{$\theta=120^\circ$}
     \label{fig:theta120}
 \end{figure}
-因为探测器会有一个能量分辨率，所以全能峰对应于一个高斯分布；另外由于本底的存在，全能峰对应部分有一个本底的叠加。利用高斯和二次函数本底\cite{}叠加拟合得到
+因为探测器会有一个能量分辨率，所以全能峰对应于一个高斯分布；另外由于本底的存在，全能峰对应部分有一个本底的叠加。利用高斯和二次函数本底\cite{nuclear}叠加拟合得到
 拟合结果分别如图~\ref{fig:theta40}等，对应的全能峰计数标记在表\ref{tab:gammaEnergy}
 
 \begin{table}
@@ -203,5 +207,7 @@ $\gamma$光子能量比外层电子的结合能大的多，可以把外层电子
 
 \section{结论}
 本实验结论是将光子视作粒子得到的能量随角度的分布与实验结果吻合，卡方检验结果与假设符合。微分散射截面随角度的分布与理论有一定差异，需要进一步探究原因。
+\section{附录}
+所有代码和处理结果可以从\url{https://github.com/greatofdream/AdvancePhysicsExperiment/tree/master/ComptonScatter}中获取。
 \bibliography{report}
 \end{document}
