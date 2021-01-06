@@ -1,0 +1,266 @@
+\documentclass[aspectratio=1610,12pt]{beamer}
+\usepackage{amsmath,ctex, amssymb, braket}
+\usepackage{graphicx}
+\usepackage{url}
+\usetheme{CambridgeUS}
+\usecolortheme{seahorse}
+\bibliographystyle{elsarticle-num}
+\title{群表示与量子场的运动方程}
+\author{张爱强}
+\institute{2019311113}
+\date{}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\begin{frame}
+    \tableofcontents
+\end{frame}
+\section{引言}
+\begin{frame}
+    \frametitle{概述}
+    \begin{block}{}
+        量子场论中有三种对应基本粒子的场，包括标量量子场，矢量量子场，旋量量子场。标量量子场是最平庸的场，对应的基本粒子为Higgs粒子。
+        矢量量子场是各种非平庸量子场中有经典对应的最简单的场，对应于除引力外的其它相互作用力。旋量量子场是非平庸量子场中无经典对应的
+        最简单的场，已发现的所有物质型基本粒子都由旋量场描述。
+
+        量子场满足Klein-Gordon方程\cite{weinberg}：
+        \begin{equation}
+            (\square-m^2)\Psi(x)=0
+        \end{equation}
+    \end{block}
+\end{frame}
+\begin{frame}
+    \frametitle{概述}
+    \begin{block}{}
+        此外矢量场满足
+        \begin{equation}
+            \partial_\mu\psi^\mu(x)=0
+        \end{equation}
+        旋量场满足Dirac方程：
+        \begin{equation}
+            (i\gamma^\mu\partial_\mu+m)\psi(x)=0
+        \end{equation}
+        本文试图从Lorentz群表示出发，给出不同场之间的运动方程的差异来源。并从量子场的函数形式出发，结合不同群表示的变换\cite{weinberg}，对比上述结果。
+    \end{block}
+\end{frame}
+\section{群表示}
+\begin{frame}
+    \frametitle{Lorentz群表示}
+    Lorentz群可以用矩阵$\Lambda^\mu_\nu$表示，构成GL(4,R)的子群O(3,1)\cite{yucheng}\cite{Zee}。
+    一般将Lorentz群限制为正规正时Lorentz群，$det\Lambda=1$,$\Lambda^0_0>1$，这些
+    子群构成SO(3,1).
+
+    通过无穷小变换\cite{weinberg}，$\Lambda^\mu_\nu=\delta^\mu_\nu+\omega^\mu_\nu$，可以得到Poincare代数
+    \begin{align}
+        i[J^{\mu\nu},J^{\rho\sigma}]&=\eta^{\nu\rho}J^{\mu\sigma}-\eta^{\mu\rho}J^{\nu\sigma}-\eta^{\sigma\mu}J^{\rho\nu}+\eta^{\sigma\nu}J^{\rho\mu}\\
+        i[P^\mu,J^{\rho\sigma}]&=\eta^{\mu\rho}P^{\sigma}-\eta^{\mu\sigma}P^{\rho}
+    \end{align}
+\end{frame}
+\begin{frame}
+    \frametitle{Lorentz群的Lie代数}
+    对于Lorentz群，Lie代数同构于so(3,1)代数：
+    \begin{equation}
+        [J_i,J_j]=i\epsilon_{ijk}J_k,[J_i,K_j]=i\epsilon_{ijk}K_k,[K_i,K_j]=i\epsilon_{ijk}J_k
+    \end{equation}
+    其中$J_i$对应so(3)的代数，所以$so(3)\subset so(3,1)$\cite{yucheng}。so(3,1)没有非平庸的Abel理想，
+    所以so(3,1)是一个半单Lie代数。半单Lie代数总可以写成单李代数的直和，定义
+    \begin{equation}
+        M_i=(J_i+iK_i)/2, N_i=(J_i-iK_i)/2
+    \end{equation}
+    对于上述两类变换满足
+    \begin{equation}
+        [M_i,M_j]=i\epsilon_{ijk}M_k,[N_i,N_j]=i\epsilon_{ijk}N_k,[M_i,N_j]=0
+    \end{equation}
+    所以M,N分别张成so(3,1)的两个理想，而这两个理想对应的李代数与su(2)代数同构,(即旋转群的李代数o(3)同构)，可以得到
+    \begin{equation}
+        so(3,1)=su(2)\otimes su(2)
+    \end{equation}
+\end{frame}
+\begin{frame}
+    \frametitle{不同量子场对应的群表示}
+    因此我们可以通过使用SU(2)对应的不可约表示的直积来构成Lorentz群的表示。记SU(2)的不可约表示
+    $D^{(j)}$，对于Lorentz表示下的两个数为$(u,v)$，那么Lorentz的不可约表示为
+    \begin{equation}
+        D^{(u,v)}=D^{(u)}\otimes D^{(v)}
+    \end{equation}
+    对应的基为$\ket{(u,v)}$，即SU(2)对应基的直积。
+    \begin{align}
+        M_3 \ket{(u,v);m_u,m_v}=m_u\ket{(u,v);m_u,m_v}, N_3 \ket{(u,v)} =n_u \ket{(u,v);m_u,m_v}\\
+        M_\pm \ket{(u,v);m_u,m_v} = \sqrt{u(u+1)-m_u(m_u\pm1)}\ket{(u,v);m_u\pm1,m_v}\\
+        M_\pm \ket{(u,v);m_u,m_v} = \sqrt{u(u+1)-m_u(m_u\pm1)}\ket{(u,v);m_u,m_v\pm1}
+    \end{align}
+\end{frame}
+\begin{frame}
+    由不同(u,v)得到的场总结如下\cite{Mceey}
+    \begin{table}
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            $(j_+,j_-)$&维数&物理对应\\
+            $(0,0)$&1&标量场\\
+            $(\frac{1}{2},0)$&2&左手Weyl旋量场\\
+            $(0,\frac{1}{2})$&2&右手Weyl旋量场\\
+            $(\frac{1}{2},\frac{1}{2})$&4&4矢量场\\
+            $(\frac{1}{2},0)\oplus (0,\frac{1}{2})$&4&Dirac旋量场\\
+        \end{tabular}
+    \end{table}
+\end{frame}
+\subsection{Weyl旋量}
+\begin{frame}
+    考虑左手Weyl旋量，表示空间基为$\ket{1/2,0},\ket{-1/2,0}$。在这组基下得到的生成元表示矩阵恰好为
+    Pauli矩阵。
+    \begin{equation}
+        J_i=\frac{1}{2}\sigma_i, K_i=-\frac{i}{2}\sigma_i
+    \end{equation}
+    
+    在Lorentz变化下的变换关系是
+    \begin{equation}
+        D(\Lambda)\psi_{La}=e^{i\vec{\theta}\vec{J}+\vec{\phi}\vec{K}}\psi_{Lb}
+    \end{equation}
+
+    对于右手Weyl旋量，与左手恰好相反。
+\end{frame}
+\begin{frame}
+    Weyl旋量在Lorentz变换下的关系是
+    \begin{align}
+        U^{-1}(\Lambda)\psi_{La}(x)U(\Lambda)&=D_L(\Lambda)^{\ b}_{a}\psi_{Lb}(\Lambda^{-1}x)\\
+        U^{-1}(\Lambda)\psi_{Ra}(x)U(\Lambda)&=D_R(\Lambda)^{\ b}_{a}\psi_{Rb}(\Lambda^{-1}x)
+    \end{align}
+    变换矩阵$D_L(\Lambda),D_R(\Lambda)$不是幺正的，旋量场算符非Hermitian,左右取厄密共轭：
+    \begin{equation}
+        U^{-1}(\Lambda)\psi^\dagger_{La}(x)U(\Lambda)=D_R(\Lambda)^{\ b}_{a}\psi^\dagger_{Lb}(\Lambda^{-1}x)
+    \end{equation}
+    所以左手Weyl旋量的厄密共轭是右手Weyl旋量。
+
+    构造左手Weyl旋量场的Lagrangian。利用$\psi^\dagger_L,\psi_L$，要求Lagrangian是一个实标量，包含动力学和运动项，其中$\overline{\sigma}^{\mu}=(I,-\sigma)$
+    \begin{equation}
+        L_L=i\psi^\dagger_L\overline{\sigma}^\mu\partial_\mu\psi_L-\frac{1}{2}m\psi_L\psi_L-\frac{1}{2}m\psi^\dagger_L\psi^\dagger_L
+    \end{equation}
+    对Lagrangian对应的作用量求变分，得到Weyl方程
+    \begin{equation}
+        -i\overline{\sigma}^\mu\partial_\mu\psi_L+m\psi^\dagger_L=0
+    \end{equation}
+    同理可以得到右手Weyl方程：
+    \begin{equation}
+        -i\overline{\sigma}^\mu\partial_\mu\psi_R+m\psi^\dagger_R=0
+    \end{equation}
+\end{frame}
+\subsection{旋量场}
+\begin{frame}
+    \frametitle{旋量场运动方程}
+    旋量场是$(\frac{1}{2},0)\oplus (0,\frac{1}{2})$的表示，那么对应的基底为
+    \begin{equation}
+        \Psi=\left(\begin{array}{c}
+            \psi_{La}\\
+            \psi^{\dagger}_{LA}\\
+        \end{array}\right)
+    \end{equation}
+    对应的运动方程为
+    \begin{equation}
+        \left(\begin{array}{cc}
+            m&-i\overline{\sigma}^\mu\partial_\mu\\
+            -i\overline{\sigma}^\mu\partial_\mu&m\\
+        \end{array}\right)\Psi=0
+    \end{equation}
+    定义$\gamma$矩阵为
+    \begin{equation}
+        -i\left(\begin{array}{cc}
+            0&\overline{\sigma}^\mu\\
+            \overline{\sigma}^\mu&0\\
+        \end{array}\right)
+    \end{equation}
+    那么即可得到旋量场对应的Dirac方程
+    \begin{equation}
+        (\gamma^\mu\partial_\mu+m)\psi(x)=0
+    \end{equation}
+\end{frame}
+\subsection{矢量场}
+\begin{frame}
+    \frametitle{矢量场运动方程}
+    矢量场对应(u=1/2,v=1/2)，表示为4维。可以看作$(\frac{1}{2},0)\otimes (0,\frac{1}{2})$的直积，对应基底为
+    \begin{equation}
+        \left(\begin{array}{c}
+            \psi^1_{L}\psi^1_R\\
+            \psi^1_L\psi^2_R\\
+            \psi^2_L\psi^1_R\\
+            \psi^2_L\psi^2_R\\
+        \end{array}\right)
+    \end{equation}
+    对应的表示可以写为两个SU(2)矩阵的直乘。
+
+    \begin{equation}
+        U^{-1}(\Lambda)\psi(x)U(\Lambda)=\Lambda^{\mu}_{\ \nu} A^\nu
+    \end{equation}
+    矢量场的Lagranian为\cite{Lancaster}
+    \begin{equation}
+        L=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}+\frac{1}{2}m^2A_\mu A^\mu
+    \end{equation}
+    对上式取散度可得到矢量场的运动方程为
+    \begin{equation}
+        \partial_\mu\psi^\mu=0
+    \end{equation}
+\end{frame}
+\section{量子场函数}
+\begin{frame}
+    \frametitle{weinberg的思路}
+    从粒子的场方程开始，根据Lorentz不变性导出函数内的系数，并在最后导出场方程。
+
+    利用产生湮灭场构建自由场，其中
+    \begin{align}
+        \psi^+_l(x)=\sum_{\sigma n}{\int{d^3pu_l(x;\mathbf{p},\sigma,n)a(\mathbf{p},\sigma,n)}}\\
+        \psi^-_l(x)=\sum_{\sigma n}{\int{d^3pv_l(x;\mathbf{p},\sigma,n)a^\dagger(\mathbf{p},\sigma,n)}}
+    \end{align}
+    根据$u_l,v_l$的不同值选取，可以得到不同的量子场\cite{weinberg}。其中标量场只有一个分量，满足Klein-Gordon方程\cite{weinberg}：
+    \begin{equation}
+        (\square-m^2)\Psi(x)=0
+    \end{equation}
+    下面仅引用Weinberg关于矢量场和旋量场的结果。
+\end{frame}
+\subsection{旋量场}
+\begin{frame}
+    旋量场对应的变换满足
+    \begin{equation}
+        D(L(p))\beta D^{-1}(L(p))=L^{\ 0}_\mu(p)\gamma^\mu=p_\mu\gamma^\mu/M
+    \end{equation}
+    那么可以推出
+    \begin{align}
+        (p_\mu\gamma^\mu-M)u(\vec{p},\sigma)=0\\
+        (p_\mu\gamma^\mu+M)v(\vec{p},\sigma)=0
+    \end{align}
+    从而结合旋量场的方程得到
+    \begin{equation}
+        (i\gamma^\mu\partial_\mu-M)\psi(x)=0
+    \end{equation}
+\end{frame}
+\subsection{矢量场}
+\begin{frame}
+    系数函数由零动量形式给定\cite{weinberg}
+    \begin{align}
+        u^\mu(\mathbf{p},\sigma)=(\frac{m}{p^0})^{1/2}L(p)^\mu_{\ \nu}u^\nu(0,\sigma)\\
+        v^\mu(\mathbf{p},\sigma)=(\frac{m}{p^0})^{1/2}L(p)^\mu_{\ \nu}v^\nu(0,\sigma)
+    \end{align}
+    自旋为1有质量时,$e^\mu(\vec{p},\sigma)=L^\mu_{\ \nu}(\vec{p})e^\mu(0,\sigma)$
+    \begin{equation}
+        u^\mu(\vec{p},\sigma)=v^{\mu*}(\vec{p},\sigma)=(2p^0)^{-1/2}e^\mu(\vec{p},\sigma)
+    \end{equation}
+    用动量算符作用
+    \begin{equation}
+        p_\mu e^\mu(\vec{p},\sigma)=0
+    \end{equation}
+    由上式可得
+    \begin{equation}
+        \partial_\mu\psi^\mu=0
+    \end{equation}
+\end{frame}
+\section{结论}
+\begin{frame}
+    \frametitle{总结}
+    \begin{enumerate}
+        \item 矢量场和旋量场的运动方程不同，是因为它们具有不同的群表示，不同的群表示引起不可约张量算符不同的计算性质。
+    \end{enumerate}
+\end{frame}
+\section{参考文献}
+\begin{frame}
+    \bibliography{report}
+\end{frame}
+\end{document}
