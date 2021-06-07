@@ -1,0 +1,205 @@
+\documentclass[aspectratio=169,10pt]{beamer}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{biblatex}
+\addbibresource{ref.bib}
+\setbeamerfont{footnote}{size=\tiny}
+\usetheme{CambridgeUS}
+\usecolortheme{seahorse}
+\usefonttheme{serif}
+\pgfdeclareimage[height=0.5cm]{university-logo}{logo.png}
+\logo{\pgfuseimage{university-logo}}
+
+\title{Quantum Error Correction}
+\subtitle{Experiments Realization}
+\author{ZhangAiqiang}
+\institute{Tsinghua University}
+\date{\today}
+\begin{document}
+\begin{frame}
+    \titlepage
+\end{frame}
+\begin{frame}
+    \frametitle{Content}
+    \tableofcontents
+\end{frame}
+\section{Theory}
+\begin{frame}
+    \frametitle{QEC Theory: Threshold}
+    Maxwell's Demon is connection between information and thermodynamics.
+    \begin{columns}
+        \begin{column}{0.35\textwidth}
+            %\includegraphics[width=\columnwidth]{figure/maxellDaemon.jpg}
+        \end{column}
+        \begin{column}{0.7\textwidth}
+            \begin{block}{Abilities of Demon}
+            \begin{enumerate}
+                \item monitoring individual molecules of a gas contained in two neighbouring chambers initially at the same temperature.
+                \item opening and closing a molecular-sized trap door to collects the faster molecules in one of the chambers.
+            \end{enumerate}
+        \end{block}
+
+
+        \begin{block}{Problem}
+            The work of demon: $ W = 0 $
+
+            The entropy of enviroment: $\Delta S<0$
+
+            Violation of the second law of thermodynamics.
+        \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+\begin{frame}
+    \frametitle{Qubit Type}
+
+    \begin{block}{Solution of Paradox}
+        According to Landauer's principle, any logically irreversible transformation of classical information
+        is necessarily accompanied by the dissipation of at least $kT\mathrm{ln(2)}$ of heat per lost bit.
+    
+        $W_1,W_2$ is the initial and final states of system, when an atom is limited in half of chamber, the states number will decrease. $W_2=W_1/2$
+        
+        \[\Delta S=k\mathrm{ln}(W_1)-k\mathrm{ln}(W_2)=k\mathrm{ln(2)}\]
+        Thus $kT\mathrm{ln(2)}$ is the result of reversible process.
+    \end{block}
+    However, the experiments was conducted unitl 2012.
+\end{frame}
+\section{Experiments}
+\subsection{Partial-erasure}
+\begin{frame}
+    \frametitle{Erasure Protocol}
+    \begin{columns}
+        \begin{column}{0.3\textwidth}
+            \centering
+            %\includegraphics[width=\columnwidth]{figure/partialEraser1.png}
+        \end{column}
+        \begin{column}{0.7\textwidth}
+            \centering
+            %\includegraphics[width=0.8\columnwidth]{figure/partialEraser2.png}
+        \end{column}
+    \end{columns}
+    \begin{block}{Cycle Steps\cite{berut2012experimental}}
+        \begin{itemize}
+            \item initialize a two wells system. $S_i=k\mathrm{ln(2)}$
+            \item lowering the barrier height and apply a tilting force to bring particle into right.
+            \item increase the barrier to initial value
+        \end{itemize}
+    \end{block}
+\end{frame}
+\begin{frame}
+    \frametitle{Experiment Result}
+    \begin{columns}
+        \begin{column}{0.28\textwidth}
+            \centering
+            %\includegraphics[width=\columnwidth]{figure/partialEraser3.png}
+        \end{column}
+        \begin{column}{0.7\textwidth}
+            $r$ is the success rate of erasure, the dissipated heat is
+            \[<Q>_{Landauer}=kT(ln(2)+rln(r)+(1-r)ln(1-r))\]
+
+            \begin{block}{Fit function}
+                \[<Q>=<Q>_{Landauer}+(Aexp(-t/\tau_k)+1)B/\tau\]
+                The thermodynamic limit to information erasure is Landauer bound.
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+\subsection{Complete-erasure}
+\begin{frame}
+    \frametitle{Experiment Setup}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            %\includegraphics[width=\columnwidth]{figure/completeEraser1.png}
+
+            %\includegraphics[width=0.85\columnwidth]{figure/completeEraser2.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \begin{block}{Feedback Operation\cite{jun2014high}}
+                \begin{enumerate}
+                    \item acquisition of an image of a fluorescent colloidal particle
+                    \item determination of particle position from that image using a centroid algorithm
+                    \item evaluation of feedback force $F_x=-\partial_xU(x,t)$ at the observed position
+                    \item application of electric force with voltage set by electrodes, held constant during the update time $t_s=10\mathrm{ms}$
+                \end{enumerate}
+            \end{block}
+
+            Erasure protocol and trajectories for full erasure($p=1$) and no erasure($p=0.5$). 
+        \end{column}
+    \end{columns}
+\end{frame}
+\begin{frame}
+    \frametitle{Experiment Result}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            %\includegraphics[width=\columnwidth]{figure/completeEraser3.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            The mean work of each cycle is $W(\tau)$
+            \[\frac{<W>_\tau}{kT}=\frac{<W>_\infty}{kT}+a\tau^{-1}\] 
+            Attention that $frac{<W>_\infty}{kT}=ln2$ for full-erasure and 0 for the noerasure protoncols.
+        \end{column}
+    \end{columns}
+\end{frame}
+\subsection{nanomagnetic memory bit}
+\begin{frame}
+    \frametitle{Experiment Setup}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \centering
+            %\includegraphics[width=\columnwidth]{figure/magnetic1.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \begin{block}{Experiment Protocol\cite{hong2016experimental}}
+                \begin{description}
+                    \item[stage1] $H_x$ is applied to saturate the hard axis,removes the energy barrier
+                    \item[stage2] $H_y$ is applied along the easy axis to force the magnetization into the 1 state.
+                    \item[stage3] $H_x$ is removed to increase the barrier
+                    \item[stage4] $H_y$ is removed
+                \end{description}
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+\begin{frame}
+    \frametitle{Experiment Result}
+    \begin{columns}
+        \begin{column}{0.7\textwidth}
+            \centering
+            %\includegraphics[width=\columnwidth]{figure/magnetic2.png}
+            \begin{block}{Energy Dissipation}
+                The internal energy dissipation in the nanomagnet is integrating the area of m-H loops for magnetic fields
+                applied along both x and y axes followed by their subtraction.
+                
+            \end{block}
+        \end{column}
+        \begin{column}{0.3\textwidth}
+            %\includegraphics[width=\columnwidth]{figure/magnetic3.png}
+            \begin{block}{Result}
+                The experimental result for total energy dissipation are larger than Landauer limit $k_BTln(2)$
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
+\section{Discuss}
+\begin{frame}
+    \frametitle{Discuss}
+    \begin{enumerate}
+        \item Landauer limit is repeated using partial erasure and complete erasure.
+        \item Landauer limit is general in at least two different materials.
+    \end{enumerate}
+\end{frame}
+\section{Reference}
+\begin{frame}[allowframebreaks]
+    \frametitle{Reference}
+    \printbibliography
+\end{frame}
+\begin{frame}
+    \centering{THANKS!}
+\end{frame}
+\end{document}
