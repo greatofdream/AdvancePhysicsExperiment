@@ -3,6 +3,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{braket}
 \usepackage{biblatex}
 \addbibresource{ref.bib}
 \setbeamerfont{footnote}{size=\tiny}
@@ -34,90 +35,104 @@
                 \includegraphics[width=\columnwidth]{figure/3bit.png}
                 \caption{3 bit code QEC example}
             \end{figure}
+            \begin{block}{Steps of QEC}
+                \begin{enumerate}
+                    \item encode $\psi$ to 3 bits
+                    \item detect sydrome and error
+                    \item error correction and decode
+                \end{enumerate}
+            \end{block}
         \end{column}
         \begin{column}{0.5\textwidth}
-            \begin{block}{Steps of QEC}
-            \begin{enumerate}
-                \item encode $\psi$ to 3 bits
-                \item sydrome and error detect
-                \item error correction and decode
-            \end{enumerate}
+        \begin{figure}
+            \includegraphics[width=0.9\columnwidth]{figure/toffoli.png}
+            \caption{toffoli gate in QEC example}
+        \end{figure}
+        \begin{block}{Toffoli Gate}
+            Toffoli Gate substitute the error detect and error correction.    
         \end{block}
         \end{column}
     \end{columns}
-    \begin{block}{Toffli Gate}
-        Toffili Gate substitute the error detect and error correction.    
-    \end{block}
 \tiny{Steane. A Tutorial on Quantum Error Correction}
+\tiny{Superconducting circuits: Toffoli gate and error correction}
 \end{frame}
 \begin{frame}
     \frametitle{Surface Code}
-    
-    However, the experiments was conducted unitl 2012.
+    \begin{columns}
+        \begin{column}{0.38\textwidth}
+            \begin{figure}
+                \includegraphics[width=\columnwidth]{figure/surfacecode.png}
+                \caption{Surface code}
+            \end{figure}
+        \end{column}
+        \begin{column}{0.6\textwidth}
+            \begin{block}{Surface Code}
+            \begin{enumerate}
+                \item data qubit: open circle
+                \item measurement-Z qubit: green solid circle
+                \item measurement-X qubit: orange solid circle
+            \end{enumerate}
+
+            relative tolerance to local errors.
+        \end{block}
+        \end{column}
+    \end{columns}
+\tiny{Fowler. Surface codes: Towards practical large-scale quantum computation}
 \end{frame}
 \section{Experiments}
 \subsection{3 bit code}
 \begin{frame}
     \frametitle{Trapped Ions}
     \begin{columns}
-        \begin{column}{0.3\textwidth}
+        \begin{column}{0.45\textwidth}
             \centering
-            %\includegraphics[width=\columnwidth]{figure/partialEraser1.png}
+            \includegraphics[width=\columnwidth]{figure/qec.png}
         \end{column}
-        \begin{column}{0.7\textwidth}
+        \begin{column}{0.55\textwidth}
             \centering
-            %\includegraphics[width=0.8\columnwidth]{figure/partialEraser2.png}
+            \includegraphics[width=\columnwidth]{figure/qec11.png}
+            \begin{itemize}
+                \item Measurement: resonnance fluorescence, $\ket{\downarrow}$ fluoresces whereas $\ket{\uparrow}$ not
+                \item Use sydrome of ancilla to correct the error.
+            \end{itemize}
         \end{column}
     \end{columns}
-    \begin{block}{Cycle Steps\cite{berut2012experimental}}
-        \begin{itemize}
-            \item initialize a two wells system. $S_i=k\mathrm{ln(2)}$
-            \item lowering the barrier height and apply a tilting force to bring particle into right.
-            \item increase the barrier to initial value
-        \end{itemize}
-    \end{block}
+\tiny{Chiaverini. Realization of quantum error correction.}
 \end{frame}
 \begin{frame}
     \frametitle{Trapped Ions}
     \begin{columns}
-        \begin{column}{0.28\textwidth}
+        \begin{column}{0.55\textwidth}
             \centering
-            %\includegraphics[width=\columnwidth]{figure/partialEraser3.png}
+            \includegraphics[width=\columnwidth]{figure/qec2.png}
         \end{column}
-        \begin{column}{0.7\textwidth}
-            $r$ is the success rate of erasure, the dissipated heat is
-            \[<Q>_{Landauer}=kT(ln(2)+rln(r)+(1-r)ln(1-r))\]
-
-            \begin{block}{Fit function}
-                \[<Q>=<Q>_{Landauer}+(Aexp(-t/\tau_k)+1)B/\tau\]
-                The thermodynamic limit to information erasure is Landauer bound.
-            \end{block}
+        \begin{column}{0.45\textwidth}
+            \begin{enumerate}
+                \item Initialization: optical-pumping technique.
+                \item Toffoli Gate.
+                \item Three consecutive correction cycles.
+            \end{enumerate}
         \end{column}
     \end{columns}
+\tiny{Schindler.Experimental Repetitive Quantum Error Correction}
 \end{frame}
 \begin{frame}
     \frametitle{Superconduct Qubit}
     \begin{columns}
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.45\textwidth}
             \centering
-            %\includegraphics[width=\columnwidth]{figure/completeEraser1.png}
-
-            %\includegraphics[width=0.85\columnwidth]{figure/completeEraser2.png}
+            \includegraphics[width=\columnwidth]{figure/qec3.png}
         \end{column}
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.55\textwidth}
             \centering
-            \begin{block}{Feedback Operation\cite{jun2014high}}
+            \begin{block}{}
                 \begin{enumerate}
-                    \item acquisition of an image of a fluorescent colloidal particle
-                    \item determination of particle position from that image using a centroid algorithm
-                    \item evaluation of feedback force $F_x=-\partial_xU(x,t)$ at the observed position
-                    \item application of electric force with voltage set by electrodes, held constant during the update time $t_s=10\mathrm{ms}$
+                    \item c: Two-qubit density matrices($\rho$) of the ancillas after each of the four possible full bit-flip errors has occurred.
                 \end{enumerate}
-            \end{block}
-
-            Erasure protocol and trajectories for full erasure($p=1$) and no erasure($p=0.5$). 
+            \end{block}  
         \end{column}
     \end{columns}
+\tiny{Reed. Realization of three-qubit quantum error correction with superconducting circuits}
 \end{frame}
 \subsection{Surface Code}
 \begin{frame}
@@ -125,49 +140,50 @@
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \centering
-            %\includegraphics[width=\columnwidth]{figure/completeEraser3.png}
+            \includegraphics[width=\columnwidth]{figure/surface.png}
         \end{column}
         \begin{column}{0.5\textwidth}
-            The mean work of each cycle is $W(\tau)$
-            \[\frac{<W>_\tau}{kT}=\frac{<W>_\infty}{kT}+a\tau^{-1}\] 
-            Attention that $frac{<W>_\infty}{kT}=ln2$ for full-erasure and 0 for the noerasure protoncols.
+            \centering
+            \includegraphics[width=\columnwidth]{figure/surface1.png}
+            \begin{enumerate}
+                \item 1D variant of the surface code, 9 qubits.
+                \item The repetition code algorithm detect bit-flips.
+            \end{enumerate}
         \end{column}
     \end{columns}
+\tiny{Kelly. State preservation by repetitive error detection in a superconducting quantum circuit}
 \end{frame}
 \begin{frame}
     \frametitle{Surface Code}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \centering
-            %\includegraphics[width=\columnwidth]{figure/magnetic1.png}
+            \includegraphics[width=\columnwidth]{figure/surface3.png}
         \end{column}
         \begin{column}{0.5\textwidth}
             \centering
-            \begin{block}{Experiment Protocol\cite{hong2016experimental}}
+            \begin{block}{Error propagation and identification}
                 \begin{description}
-                    \item[stage1] $H_x$ is applied to saturate the hard axis,removes the energy barrier
-                    \item[stage2] $H_y$ is applied along the easy axis to force the magnetization into the 1 state.
-                    \item[stage3] $H_x$ is removed to increase the barrier
-                    \item[stage4] $H_y$ is removed
+                    \item examples of errors 
+                    \item connectivity graph for the quantum circuit
                 \end{description}
             \end{block}
+            Fedelity: 
         \end{column}
     \end{columns}
+\tiny{Kelly. State preservation by repetitive error detection in a superconducting quantum circuit}
 \end{frame}
+
 
 \section{Discuss}
 \begin{frame}
     \frametitle{Discuss}
     \begin{enumerate}
-        \item Landauer limit is repeated using partial erasure and complete erasure.
-        \item Landauer limit is general in at least two different materials.
+        \item QEC has been realized physically in trapped ion and superconduct qubit.
+        \item 
     \end{enumerate}
 \end{frame}
-\section{Reference}
-\begin{frame}[allowframebreaks]
-    \frametitle{Reference}
-    \printbibliography
-\end{frame}
+
 \begin{frame}
     \centering{THANKS!}
 \end{frame}
