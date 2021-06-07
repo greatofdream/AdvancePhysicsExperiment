@@ -27,49 +27,38 @@
 \end{frame}
 \section{Theory}
 \begin{frame}
-    \frametitle{QEC Theory: Threshold}
-    Maxwell's Demon is connection between information and thermodynamics.
+    \frametitle{QEC Theory}
     \begin{columns}
-        \begin{column}{0.35\textwidth}
-            %\includegraphics[width=\columnwidth]{figure/maxellDaemon.jpg}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \includegraphics[width=\columnwidth]{figure/3bit.png}
+                \caption{3 bit code QEC example}
+            \end{figure}
         \end{column}
-        \begin{column}{0.7\textwidth}
-            \begin{block}{Abilities of Demon}
+        \begin{column}{0.5\textwidth}
+            \begin{block}{Steps of QEC}
             \begin{enumerate}
-                \item monitoring individual molecules of a gas contained in two neighbouring chambers initially at the same temperature.
-                \item opening and closing a molecular-sized trap door to collects the faster molecules in one of the chambers.
+                \item encode $\psi$ to 3 bits
+                \item sydrome and error detect
+                \item error correction and decode
             \end{enumerate}
-        \end{block}
-
-
-        \begin{block}{Problem}
-            The work of demon: $ W = 0 $
-
-            The entropy of enviroment: $\Delta S<0$
-
-            Violation of the second law of thermodynamics.
         \end{block}
         \end{column}
     \end{columns}
+    \begin{block}{Toffli Gate}
+        Toffili Gate substitute the error detect and error correction.    
+    \end{block}
+\tiny{Steane. A Tutorial on Quantum Error Correction}
 \end{frame}
 \begin{frame}
-    \frametitle{Qubit Type}
-
-    \begin{block}{Solution of Paradox}
-        According to Landauer's principle, any logically irreversible transformation of classical information
-        is necessarily accompanied by the dissipation of at least $kT\mathrm{ln(2)}$ of heat per lost bit.
+    \frametitle{Surface Code}
     
-        $W_1,W_2$ is the initial and final states of system, when an atom is limited in half of chamber, the states number will decrease. $W_2=W_1/2$
-        
-        \[\Delta S=k\mathrm{ln}(W_1)-k\mathrm{ln}(W_2)=k\mathrm{ln(2)}\]
-        Thus $kT\mathrm{ln(2)}$ is the result of reversible process.
-    \end{block}
     However, the experiments was conducted unitl 2012.
 \end{frame}
 \section{Experiments}
-\subsection{Partial-erasure}
+\subsection{3 bit code}
 \begin{frame}
-    \frametitle{Erasure Protocol}
+    \frametitle{Trapped Ions}
     \begin{columns}
         \begin{column}{0.3\textwidth}
             \centering
@@ -89,7 +78,7 @@
     \end{block}
 \end{frame}
 \begin{frame}
-    \frametitle{Experiment Result}
+    \frametitle{Trapped Ions}
     \begin{columns}
         \begin{column}{0.28\textwidth}
             \centering
@@ -106,9 +95,8 @@
         \end{column}
     \end{columns}
 \end{frame}
-\subsection{Complete-erasure}
 \begin{frame}
-    \frametitle{Experiment Setup}
+    \frametitle{Superconduct Qubit}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \centering
@@ -131,8 +119,9 @@
         \end{column}
     \end{columns}
 \end{frame}
+\subsection{Surface Code}
 \begin{frame}
-    \frametitle{Experiment Result}
+    \frametitle{Surface Code}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \centering
@@ -145,9 +134,8 @@
         \end{column}
     \end{columns}
 \end{frame}
-\subsection{nanomagnetic memory bit}
 \begin{frame}
-    \frametitle{Experiment Setup}
+    \frametitle{Surface Code}
     \begin{columns}
         \begin{column}{0.5\textwidth}
             \centering
@@ -166,26 +154,7 @@
         \end{column}
     \end{columns}
 \end{frame}
-\begin{frame}
-    \frametitle{Experiment Result}
-    \begin{columns}
-        \begin{column}{0.7\textwidth}
-            \centering
-            %\includegraphics[width=\columnwidth]{figure/magnetic2.png}
-            \begin{block}{Energy Dissipation}
-                The internal energy dissipation in the nanomagnet is integrating the area of m-H loops for magnetic fields
-                applied along both x and y axes followed by their subtraction.
-                
-            \end{block}
-        \end{column}
-        \begin{column}{0.3\textwidth}
-            %\includegraphics[width=\columnwidth]{figure/magnetic3.png}
-            \begin{block}{Result}
-                The experimental result for total energy dissipation are larger than Landauer limit $k_BTln(2)$
-            \end{block}
-        \end{column}
-    \end{columns}
-\end{frame}
+
 \section{Discuss}
 \begin{frame}
     \frametitle{Discuss}
