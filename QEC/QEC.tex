@@ -19,10 +19,10 @@
 \institute{Tsinghua University}
 \date{\today}
 \begin{document}
-\begin{frame}
+\begin{frame}[noframenumbering]
     \titlepage
 \end{frame}
-\begin{frame}
+\begin{frame}[noframenumbering]
     \frametitle{Content}
     \tableofcontents
 \end{frame}
@@ -37,7 +37,7 @@
             \end{figure}
             \begin{block}{Steps of QEC}
                 \begin{enumerate}
-                    \item encode $\psi$ to 3 bits
+                    \item encode $\psi$ into a joint state of 3 qubits
                     \item detect sydrome and error
                     \item error correction and decode
                 \end{enumerate}
@@ -71,18 +71,23 @@
                 \item data qubit: open circle
                 \item measurement-Z qubit: green solid circle
                 \item measurement-X qubit: orange solid circle
+                \item I operator is waiting operation
             \end{enumerate}
-
+            \begin{enumerate}
+                \item initialize each measure qubit in its ground state $\ket{g}$
+                \item 4 CNOTs target the measure qubit for measure-Z qubit
+                \item 4 CNOTs target the data qubit for measure-X qubit
+                \item data qubit is eigenstate of $\hat{Z_a}\hat{Z_b}\hat{Z_c}\hat{Z_d}$ and $\hat{X_a}\hat{X_b}\hat{X_c}\hat{X_d}$ 
+            \end{enumerate}
             relative tolerance to local errors.
         \end{block}
+        \tiny{Fowler. Surface codes: Towards practical large-scale quantum computation}
         \end{column}
     \end{columns}
-\tiny{Fowler. Surface codes: Towards practical large-scale quantum computation}
 \end{frame}
-\section{Experiments}
+\section{Experiments Realization}
 \subsection{3 bit code}
-\begin{frame}
-    \frametitle{Trapped Ions}
+\begin{frame}{Trapped Ions}
     \begin{columns}
         \begin{column}{0.45\textwidth}
             \centering
@@ -95,9 +100,10 @@
                 \item Measurement: resonnance fluorescence, $\ket{\downarrow}$ fluoresces whereas $\ket{\uparrow}$ not
                 \item Use sydrome of ancilla to correct the error.
             \end{itemize}
+            Fedelity is larger than $75\%$ after correction.
         \end{column}
     \end{columns}
-\tiny{Chiaverini. Realization of quantum error correction.}
+\tiny{Chiaverini. Realization of quantum error correction.2004.}
 \end{frame}
 \begin{frame}
     \frametitle{Trapped Ions}
@@ -109,12 +115,13 @@
         \begin{column}{0.45\textwidth}
             \begin{enumerate}
                 \item Initialization: optical-pumping technique.
-                \item Toffoli Gate.
+                \item Toffoli Gate to do error correction.
                 \item Three consecutive correction cycles.
             \end{enumerate}
+            \includegraphics[width=\columnwidth]{figure/qec21.png}
         \end{column}
     \end{columns}
-\tiny{Schindler.Experimental Repetitive Quantum Error Correction}
+\tiny{Schindler.Experimental Repetitive Quantum Error Correction. 2011.}
 \end{frame}
 \begin{frame}
     \frametitle{Superconduct Qubit}
@@ -127,12 +134,14 @@
             \centering
             \begin{block}{}
                 \begin{enumerate}
-                    \item c: Two-qubit density matrices($\rho$) of the ancillas after each of the four possible full bit-flip errors has occurred.
+                    \item[a] Toffoli Gate to do error correction.
+                    \item[b] state fedelity to created state
+                    \item[c] Two-qubit density matrices($\rho$) of the ancillas after each of the four possible full bit-flip errors has occurred.
                 \end{enumerate}
             \end{block}  
+            \tiny{Reed. Realization of three-qubit quantum error correction with superconducting circuits. 2012.}
         \end{column}
     \end{columns}
-\tiny{Reed. Realization of three-qubit quantum error correction with superconducting circuits}
 \end{frame}
 \subsection{Surface Code}
 \begin{frame}
@@ -146,8 +155,9 @@
             \centering
             \includegraphics[width=\columnwidth]{figure/surface1.png}
             \begin{enumerate}
-                \item 1D variant of the surface code, 9 qubits.
-                \item The repetition code algorithm detect bit-flips.
+                \item[a] 1D variant of the surface code, 9 qubits.
+                \item[b] Optical micrograph of the superconducting quantum device. 
+                \item[c] The repetition code algorithm detect bit-flips.
             \end{enumerate}
         \end{column}
     \end{columns}
@@ -163,15 +173,15 @@
         \begin{column}{0.5\textwidth}
             \centering
             \begin{block}{Error propagation and identification}
-                \begin{description}
-                    \item examples of errors 
+                \begin{enumerate}
+                    \item The quantum circuit for three cycles of the repetition code. Examples of errors and sydrome.
                     \item connectivity graph for the quantum circuit
-                \end{description}
+                \end{enumerate}
             \end{block}
-            Fedelity: 
+            Fedelity: 78\%
         \end{column}
     \end{columns}
-\tiny{Kelly. State preservation by repetitive error detection in a superconducting quantum circuit}
+\tiny{Kelly. State preservation by repetitive error detection in a superconducting quantum circuit. 2015.}
 \end{frame}
 
 
@@ -180,11 +190,11 @@
     \frametitle{Discuss}
     \begin{enumerate}
         \item QEC has been realized physically in trapped ion and superconduct qubit.
-        \item 
+        \item The tolerance of surface code to errors is higher than other approaches.
     \end{enumerate}
 \end{frame}
 
-\begin{frame}
+\begin{frame}[noframenumbering]
     \centering{THANKS!}
 \end{frame}
 \end{document}
